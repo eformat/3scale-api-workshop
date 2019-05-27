@@ -206,8 +206,8 @@ objects:
           - containerPort: 8080
             protocol: TCP
           env:
-          - name: JAVA_OPTS
-            value: "-Xmx300m"
+          - name: JAVA_OPTIONS
+            value: "-Xmx300m -Djavax.net.ssl.trustStore=/etc/secrets/keystore.jks -Djavax.net.ssl.trustStorePassword=password -Dkeycloak.allow-any-hostname=true"
           - name: SPRING_PROFILES_ACTIVE
             value: prod
           - name: SPRING_DATA_MONGODB_URI
@@ -438,7 +438,7 @@ objects:
       keycloak.bearer-only=true
       keycloak.ssl-required=external
       keycloak.disable-trust-manager=false
-      
+
       keycloak.security-constraints[0].authRoles[0]=admin
       keycloak.security-constraints[0].authRoles[1]=manager
       keycloak.security-constraints[0].authRoles[2]=user
