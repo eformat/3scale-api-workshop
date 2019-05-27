@@ -438,6 +438,7 @@ objects:
       keycloak.bearer-only=true
       keycloak.ssl-required=external
       keycloak.disable-trust-manager=true
+      keycloak.allow-any-hostname=true
 
       keycloak.security-constraints[0].authRoles[0]=admin
       keycloak.security-constraints[0].authRoles[1]=manager
