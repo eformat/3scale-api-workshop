@@ -437,6 +437,8 @@ objects:
       keycloak.resource=microcks-app
       keycloak.bearer-only=true
       keycloak.ssl-required=external
+      keycloack.truststore=/etc/secrets/keystore.jks
+      keycloack.truststore-password=password
 
       keycloak.security-constraints[0].authRoles[0]=admin
       keycloak.security-constraints[0].authRoles[1]=manager
